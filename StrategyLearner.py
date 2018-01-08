@@ -1,5 +1,5 @@
 """
-Template for implementing StrategyLearner  (c) 2016 Tucker Balch
+Implementing a StrategyLearner based on QLearner  (c)  Emmanuel Naziga
 """
 
 import datetime as dt
