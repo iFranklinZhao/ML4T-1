@@ -95,9 +95,6 @@ def compute_portvals(orders_file = "ml_orders.csv", sd = dt.datetime(2010,1,1), 
     return df_port_val
 
 def test_code():
-    # this is a helper function you can use to test your code
-    # note that during autograding his function will not be called.
-    # Define input parameters
 
     of = "ml_orders.csv"
     of2 = "calc_orders.csv"
@@ -122,10 +119,6 @@ def test_code():
     ml_portvals = compute_portvals(orders_file = of, sd = _start_date, ed = _end_date, start_val = sv)
     manual_portval = compute_portvals(orders_file = of2, sd = _start_date, ed = _end_date, start_val = sv)
     bench_portval = compute_portvals(orders_file = of3, sd = _start_date, ed = _end_date, start_val = sv)
-
-    #ml_portvals = compute_portvals(orders_file = of, sd = test_start_date, ed = test_end_date, start_val = sv)
-    #manual_portval = compute_portvals(orders_file = of2, sd = test_start_date, ed = test_end_date, start_val = sv)
-    #bench_portval = compute_portvals(orders_file = of3, sd = test_start_date, ed = test_end_date, start_val = sv)
 
     # Plot ML strategy chart
     morders = pd.read_csv(of, index_col='Date', parse_dates=True, na_values=['nan'])
