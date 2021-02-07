@@ -33,7 +33,8 @@ class RTLearner(object):
 		split_val = (trainX[split_indx1,split_feature] + trainX[split_indx2,split_feature])/2.0
 		count = 0
 		while count < 10:
-		   if (trainX[trainX[:,split_feature] <= split_val]).shape[0] == 0 or (trainX[trainX[:,split_feature] > split_val]).shape[0] == 0:
+		   if (trainX[trainX[:,split_feature] <= split_val]).shape[0] == 0 
+		or (trainX[trainX[:,split_feature] > split_val]).shape[0] == 0:
 			split_indx1 = random.randint(0,ndata-1)
 			split_indx2 = random.randint(0,ndata-1)
 			split_val = (trainX[split_indx1,split_feature] + trainX[split_indx2,split_feature])/2.0
